@@ -16,6 +16,11 @@ async function buscarVideo(evento) {
         elemento.url,
         elemento.imagem
     )));
+    if (busca.length == 0) {
+        lista.innerHTML = `
+            <h2 class="mensagem__titulo">Não foram encontrados vídeos com o termo pesquisado!<h2>
+        `;
+    }
 }
 
 const botaoDePesquisa = document.querySelector("[data-botao-pesquisa]");
